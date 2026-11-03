@@ -794,6 +794,22 @@ body.open nav.top{backdrop-filter:none!important;-webkit-backdrop-filter:none!im
 #vmodal .vm-x:hover{color:var(--orange)}
 #vmodal .vm-t{margin-top:14px;font-family:var(--mono);font-size:12px;letter-spacing:.2em;text-transform:uppercase;color:var(--orange)}
 
+/* contact : photo seule, polaroïd animé */
+#contact .me-solo{position:relative;display:grid;place-items:center;padding:30px 20px}
+#contact .me-solo .splat{width:90%;left:-6%;top:12%;z-index:0;opacity:.95}
+.polar{position:relative;z-index:2;margin:0;width:min(470px,100%);background:#fff;padding:16px 16px 0;border-radius:6px;
+  box-shadow:22px 22px 0 var(--orange),0 40px 80px rgba(0,0,0,.5);transform:rotate(-4deg);cursor:pointer;
+  transition:transform .6s cubic-bezier(.3,1.5,.5,1),box-shadow .6s var(--ease);-webkit-tap-highlight-color:transparent}
+.polar img{display:block;width:100%;aspect-ratio:4/5;object-fit:cover;object-position:center 25%;border-radius:2px}
+.polar figcaption{font-family:var(--mono);font-size:13px;letter-spacing:.15em;text-transform:uppercase;color:var(--navy);text-align:center;padding:16px 0 18px}
+.polar:hover,.polar.tap{transform:rotate(1.5deg) scale(1.04) translateY(-8px);box-shadow:30px 30px 0 var(--orange),0 50px 90px rgba(0,0,0,.55)}
+.polar.tap{animation:wig .6s}
+@keyframes wig{20%{transform:rotate(4deg) scale(1.05)}45%{transform:rotate(-2deg) scale(1.05)}70%{transform:rotate(2deg) scale(1.05)}}
+.me-solo.rv .polar{opacity:0;transform:rotate(-18deg) translate(-40px,80px) scale(.85)}
+.me-solo.rv.in .polar{opacity:1;transform:rotate(-4deg);transition:transform 1s cubic-bezier(.3,1.4,.5,1) .15s,opacity .5s .15s,box-shadow .6s}
+.me-solo.rv.in .polar:hover,.me-solo.rv.in .polar.tap{transform:rotate(1.5deg) scale(1.04) translateY(-8px)}
+@media (max-width:760px){#contact .me-solo{padding:10px 18px 30px}.polar{width:min(330px,88vw)}.polar figcaption{font-size:11px}}
+
 </style>
 </head>
 <body>
@@ -1178,7 +1194,7 @@ body.open nav.top{backdrop-filter:none!important;-webkit-backdrop-filter:none!im
   <div class="pbg"></div>
   <div class="layer ghostw" style="--d:-22;--s:-.12;left:-3%;top:6%">HELLO</div>
   <div class="wrap">
-    <div class="me-full rv"><img class="splat layer" style="--d:24" data-src="img/splash.webp" alt=""><img class="me" data-src="img/me-awards.webp" alt="Saïdou Hamadou Siddo"><figure class="ph tilt pin" data-lbgroup="ph6"><img data-src="img/ph-fauteuil.webp" alt="Saïdou Hamadou Siddo, portrait"></figure></div>
+    <div class="me-solo rv"><img class="splat layer" style="--d:24" data-src="img/splash.webp" alt=""><figure class="polar" tabindex="0"><img data-src="img/ph-fauteuil.webp" alt="Saïdou Hamadou Siddo"><figcaption>Hamadou Siddo · Niamey</figcaption></figure></div>
     <div class="cbox">
       <span class="kicker rv"><b></b>Contacts</span>
       <h2 class="rv">Parlons de<br>votre projet</h2>
@@ -1424,6 +1440,9 @@ bub.addEventListener('click',e=>{if(e.target.tagName==='I'){bubStop();return}bub
 $('#mode').addEventListener('click',bubStop);
 setTimeout(bubShow,9000);
 const _go=go;go=function(id){_go(id);nav0++;if(nav0===4||nav0===9)setTimeout(bubShow,1800)};
+
+/* polaroïd contact : animation au toucher */
+$$('.polar').forEach(p=>{const t=()=>{p.classList.remove('tap');void p.offsetWidth;p.classList.add('tap');clearTimeout(p._t);p._t=setTimeout(()=>p.classList.remove('tap'),1400)};p.addEventListener('click',t);p.addEventListener('keydown',e=>{if(e.key==='Enter')t()})});
 
 /* démarrage */
 try{if(localStorage.getItem('shs-mode')==='it')setMode(true)}catch(e){}
