@@ -781,6 +781,17 @@ body.open nav.top{backdrop-filter:none!important;-webkit-backdrop-filter:none!im
 .itbub i:hover{color:#fff}
 @media (max-width:760px){.itbub{top:60px;right:56px;font-size:11px}}
 
+/* lecteur vidéo centré */
+#vmodal{position:fixed;inset:0;z-index:260;background:rgba(2,8,24,.92);display:grid;place-items:center;padding:20px;opacity:0;pointer-events:none;transition:opacity .3s}
+#vmodal.on{opacity:1;pointer-events:auto}
+#vmodal .vm-box{width:min(1100px,100%);transform:scale(.94);transition:transform .4s var(--ease)}
+#vmodal.on .vm-box{transform:none}
+#vmodal .vm-frame{aspect-ratio:16/9;border-radius:18px;overflow:hidden;background:#000;box-shadow:0 0 0 2px var(--orange),0 40px 90px rgba(0,0,0,.6)}
+#vmodal iframe{width:100%;height:100%;border:0;display:block}
+#vmodal .vm-x{display:block;margin:0 0 12px auto;background:none;border:0;color:#fff;font-weight:700;font-size:13px;letter-spacing:.15em;cursor:pointer}
+#vmodal .vm-x:hover{color:var(--orange)}
+#vmodal .vm-t{margin-top:14px;font-family:var(--mono);font-size:12px;letter-spacing:.2em;text-transform:uppercase;color:var(--orange)}
+
 </style>
 </head>
 <body>
@@ -1392,8 +1403,15 @@ const types=['Tous',...new Set(VIDEOS.map(v=>v.type))];
 vf.innerHTML=types.map((t,i)=>`<button class="${i?'':'on'}" data-t="${t}">${t}<i>${t==='Tous'?VIDEOS.length:VIDEOS.filter(v=>v.type===t).length}</i></button>`).join('');
 $$('button',vf).forEach(bt=>bt.onclick=()=>{const t=bt.dataset.t;$$('button',vf).forEach(x=>x.classList.toggle('on',x===bt));vg.classList.toggle('filtered',t!=='Tous');
   $$('.vz',vg).forEach(z=>z.style.display=(t==='Tous'||z.dataset.type===t)?'':'none')});
-$$('.vz',vg).forEach(z=>{io.observe(z);z.addEventListener('click',e=>{if(framedV)return;e.preventDefault();
-  if(!$('iframe',z))z.insertAdjacentHTML('beforeend',`<iframe src="https://www.youtube-nocookie.com/embed/${z.dataset.id}?autoplay=1&rel=0" allow="autoplay; encrypted-media; picture-in-picture; fullscreen" allowfullscreen title="Vidéo"></iframe>`)});
+/* lecteur centré unique : une seule vidéo à la fois */
+document.body.insertAdjacentHTML('beforeend','<div id="vmodal" aria-hidden="true"><div class="vm-box"><button class="vm-x" aria-label="Fermer">FERMER ✕</button><div class="vm-frame"></div><p class="vm-t"></p></div></div>');
+const vm=$('#vmodal'),vmf=$('.vm-frame',vm);
+const vClose=()=>{vm.classList.remove('on');vmf.innerHTML='';document.documentElement.style.overflow=''};
+const vOpen=z=>{vmf.innerHTML=`<iframe src="https://www.youtube-nocookie.com/embed/${z.dataset.id}?autoplay=1&rel=0&modestbranding=1" allow="autoplay; encrypted-media; picture-in-picture; fullscreen" allowfullscreen title="Vidéo"></iframe>`;
+  $('.vm-t',vm).textContent=$('.vt small',z).textContent+(($('.vt b',z).textContent!==$('.vt small',z).textContent)?' · '+$('.vt b',z).textContent:'');vm.classList.add('on');document.documentElement.style.overflow='hidden'};
+$('.vm-x',vm).onclick=vClose;vm.addEventListener('click',e=>{if(e.target===vm)vClose()});
+addEventListener('keydown',e=>{if(e.key==='Escape'&&vm.classList.contains('on'))vClose()});
+$$('.vz',vg).forEach(z=>{io.observe(z);z.addEventListener('click',e=>{if(framedV)return;e.preventDefault();vOpen(z)});
   if(framedV){z.target='_blank';z.rel='noopener'}});
 
 /* bulle « Essayez le mode IT » : discrète, quelques fois seulement */
