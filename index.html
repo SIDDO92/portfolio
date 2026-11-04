@@ -1258,6 +1258,10 @@ addEventListener('load',()=>setTimeout(outL,reduce?0:2000));setTimeout(()=>docum
 
 /* ---------- pages ---------- */
 const pages=$$('.page'),order=pages.map(p=>p.id);
+/* adresses propres (/videos, /contact…) sur le site ; #page dans l'aperçu Claude */
+const framedPg=(()=>{try{return window.self!==window.top}catch(e){return true}})();
+const curRoute=()=>{const p=location.pathname.replace(/^\/+|\/+$/g,'').replace(/\.html$/,'');const h=location.hash.slice(1);
+  const c=(h&&document.getElementById(h)&&document.getElementById(h).classList.contains('page'))?h:(p&&p!=='index'&&document.getElementById(p)?p:'accueil');return c};
 const REAL=['branding','visuels','print','web','identites','videos'];
 const title=id=>$('#'+id).dataset.title;
 /* chargement des images page par page (plus léger sur mobile) */
@@ -1293,7 +1297,7 @@ let wx='50%',wy='50%',busy=false;
 document.addEventListener('click',e=>{const a=e.target.closest('a[href^="#"]');if(a){wx=e.clientX+'px';wy=e.clientY+'px'}},true);
 let go=function(id){
   if(!$('#'+id)||id===cur)return;
-  if(location.hash!=='#'+id){history.pushState(null,'','#'+id)}
+  const url=framedPg?'#'+id:(id==='accueil'?'/':'/'+id);if(curRoute()!==id){history.pushState(null,'',url)}
   transition(id);
 }
 function transition(id){
@@ -1307,7 +1311,7 @@ function transition(id){
 }
 document.addEventListener('click',e=>{const a=e.target.closest('a[href^="#"]');if(!a)return;const h=a.getAttribute('href').slice(1);
   if(!h){return}if($('#'+h)&&$('#'+h).classList.contains('page')){e.preventDefault();go(h)}});
-addEventListener('popstate',()=>{const h=location.hash.slice(1)||'accueil';if(h!==cur)transition(h)});
+addEventListener('popstate',()=>{const h=curRoute();if(h!==cur)transition(h)});
 /* clavier : flèches pour changer de page */
 addEventListener('keydown',e=>{if($('#lb').classList.contains('on')||e.target.closest('input,textarea'))return;
   const i=order.indexOf(cur);if(e.key==='PageDown'||(e.altKey&&e.key==='ArrowRight'))go(order[(i+1)%order.length]);if(e.key==='PageUp'||(e.altKey&&e.key==='ArrowLeft'))go(order[(i-1+order.length)%order.length])});
@@ -1456,7 +1460,7 @@ $$('.polar').forEach(p=>{const t=()=>{p.classList.remove('tap');void p.offsetWid
 
 /* démarrage */
 try{if(localStorage.getItem('shs-mode')==='it')setMode(true)}catch(e){}
-show(location.hash.slice(1)||'accueil');
+{const r=curRoute();show(r);if(!framedPg&&location.hash&&$('#'+r))history.replaceState(null,'',r==='accueil'?'/':'/'+r)}
 })();
 
 </script>
