@@ -3,7 +3,7 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>Découvrez qui je-suis - Portfolio</title>
+<title>Découvrez qui je suis - Portfolio</title>
 <meta name="description" content="Portfolio de Saïdou Hamadou Siddo, communicateur, graphiste, webdesigner, informaticien et formateur à Niamey (Niger) : branding, visuels, print, sites web, vidéos, live streaming, IT et formations.">
 <meta name="author" content="Saïdou Hamadou Siddo">
 <meta name="robots" content="index,follow">
@@ -13,9 +13,12 @@
 <meta property="og:type" content="website">
 <meta property="og:url" content="https://saidsiddo.netlify.app/">
 <link rel="canonical" href="https://saidsiddo.netlify.app/">
+<link rel="alternate" hreflang="fr" href="https://saidsiddo.netlify.app/">
+<link rel="alternate" hreflang="en" href="https://saidsiddo.netlify.app/en/">
+<link rel="alternate" hreflang="x-default" href="https://saidsiddo.netlify.app/">
 <meta property="og:locale" content="fr_FR">
 <meta property="og:site_name" content="Saïdou Hamadou Siddo — Portfolio">
-<meta property="og:title" content="Découvrez qui je-suis - Portfolio · Saïdou Hamadou Siddo">
+<meta property="og:title" content="Découvrez qui je suis - Portfolio · Saïdou Hamadou Siddo">
 <meta property="og:description" content="Communication, design, sites web, vidéo, IT et formation — Niamey, Niger.">
 <meta property="og:image" content="https://saidsiddo.netlify.app/og-cover-2.jpg">
 <meta property="og:image:width" content="1200"><meta property="og:image:height" content="630">
@@ -829,6 +832,79 @@ body.open nav.top{backdrop-filter:none!important;-webkit-backdrop-filter:none!im
   .stagebr .prod figcaption{bottom:12px;font-size:11px;letter-spacing:.12em}
 }
 
+/* ===== bandeau expérience (années calculées automatiquement) ===== */
+.xp{position:relative;z-index:2;display:grid;grid-template-columns:auto minmax(0,1fr);gap:clamp(24px,4vw,70px);align-items:center;margin:0 0 clamp(50px,7vw,100px);padding-bottom:clamp(30px,4vw,50px);border-bottom:1px solid var(--line)}
+.xp-num{position:relative;display:flex;align-items:flex-end;gap:10px;line-height:.78}
+.xp-n{position:relative;font-family:"Anton",sans-serif;font-size:clamp(170px,22vw,340px);color:transparent;-webkit-text-stroke:3px var(--orange);
+  background:linear-gradient(0deg,var(--orange) 0 50%,transparent 50% 100%);background-size:100% 200%;background-position:0 0;-webkit-background-clip:text;background-clip:text;
+  transition:background-position 1.6s cubic-bezier(.6,0,.2,1) .5s}
+.xp.in .xp-n{background-position:0 100%}
+.xp-n::after{content:"";position:absolute;left:-6%;right:-6%;bottom:6%;height:14px;background:var(--orange);border-radius:999px;transform:scaleX(0);transform-origin:left;transition:transform .8s cubic-bezier(.6,0,.2,1) 1.9s}
+.xp.in .xp-n::after{transform:scaleX(1)}
+.xp-u{font-family:"Anton",sans-serif;font-size:clamp(44px,5vw,84px);text-transform:uppercase;color:#fff;padding-bottom:.18em;opacity:0;transform:translateY(20px);transition:all .6s var(--ease) 1.4s}
+.xp.in .xp-u{opacity:1;transform:none}
+.xp-k{display:inline-flex;align-items:center;gap:10px;font-family:var(--mono);font-size:12px;letter-spacing:.25em;text-transform:uppercase;color:var(--orange)}
+.xp-k b{width:28px;height:2px;background:var(--orange)}
+.xp-h{font-family:"Anton",sans-serif;font-size:clamp(38px,4.6vw,82px);line-height:.98;text-transform:uppercase;margin:14px 0 22px;font-weight:400}
+.xp-h em{font-style:normal;color:var(--orange)}
+.xp-line{display:flex;align-items:center;gap:14px;font-family:var(--mono);font-weight:800;font-size:14px;max-width:560px}
+.xp-bar{position:relative;flex:1;height:3px;background:rgba(255,255,255,.18);border-radius:3px;font-style:normal}
+.xp-fill{position:absolute;inset:0;background:var(--orange);transform:scaleX(0);transform-origin:left;transition:transform 1.6s cubic-bezier(.6,0,.2,1) .5s;border-radius:3px}
+.xp-dot{position:absolute;top:50%;left:0;width:14px;height:14px;border-radius:50%;background:#fff;box-shadow:0 0 0 5px rgba(255,106,19,.35);transform:translate(-50%,-50%);transition:left 1.6s cubic-bezier(.6,0,.2,1) .5s}
+.xp.in .xp-fill{transform:scaleX(1)}.xp.in .xp-dot{left:100%;animation:xpPulse 1.8s 2.2s infinite}
+@keyframes xpPulse{50%{box-shadow:0 0 0 12px rgba(255,106,19,0)}}
+.xp-y0{color:var(--mute)}.xp-y1{color:var(--orange)}
+.xp-s{margin-top:12px;color:var(--soft);font-size:14px}
+body.it .xp-n{-webkit-text-stroke-color:#3BA0FF;background-image:linear-gradient(0deg,#3BA0FF 0 50%,transparent 50% 100%)}
+body.it .xp-h{font-family:var(--mono);font-size:clamp(26px,3vw,48px)}
+@media (max-width:760px){
+  .xp{grid-template-columns:1fr;gap:6px;text-align:left}
+  .xp-n{font-size:46vw;-webkit-text-stroke-width:2px}
+  .xp-u{font-size:15vw}
+  .xp-h{font-size:10vw}
+  .xp-line{font-size:12px}
+}
+@media (prefers-reduced-motion:reduce){.xp-n{background-position:0 100%}.xp-fill{transform:none}.xp-dot{left:100%}.xp-u{opacity:1;transform:none}}
+
+.xp-s{font-family:var(--body);font-style:italic;font-size:clamp(15px,1.3vw,19px);color:var(--soft);margin-top:16px}
+
+/* témoignages recto verso */
+.q.tq{padding:0;background:none;perspective:1400px;cursor:pointer;outline:none}
+.tq-in{display:grid;height:100%;transition:transform .9s cubic-bezier(.4,.1,.2,1);transform-style:preserve-3d}
+
+.tq .tf{grid-area:1/1;position:relative;display:flex;flex-direction:column;background:#fff;color:var(--navy);border-radius:30px;padding:34px 30px 28px;backface-visibility:hidden;-webkit-backface-visibility:hidden}
+.tq .tf.back{transform:rotateY(180deg);background:var(--navy);color:#fff;border:2px solid var(--orange)}
+.tq.dark .tf.front{background:var(--orange);color:#fff}
+.tq.dark .tf.back{background:#fff;color:var(--navy);border-color:var(--navy)}
+.tq .tf .mark{position:absolute;top:-34px;right:26px;font-family:"Anton";font-size:120px;line-height:1;color:var(--orange)}
+.tq.dark .tf.front .mark{color:#fff}
+.tq .tl{align-self:flex-start;font-family:var(--mono);font-size:11px;font-weight:800;letter-spacing:.2em;padding:4px 10px;border-radius:999px;background:var(--orange);color:#fff;margin-bottom:16px}
+.tq.dark .tf.front .tl{background:#fff;color:var(--orange)}
+.tq .tf p{font-size:16px;line-height:1.65;flex:1}
+.tq .tf p.long{font-size:14.5px;line-height:1.6}
+.tq .tr{font-family:var(--mono);font-size:11px;letter-spacing:.12em;text-transform:uppercase;opacity:.65;margin-top:10px}
+.tq .who{display:flex;gap:14px;align-items:center;margin-top:20px;padding-top:18px;border-top:1px solid rgba(0,0,0,.1)}
+.tq .back .who,.tq.dark .front .who{border-color:rgba(255,255,255,.3)}
+.tq .who b{display:block;font-size:15px}.tq .who small{opacity:.75;font-size:13px}
+.tq .av{flex:none}
+.tq .back .av{background:var(--orange);color:#fff}
+.tq.dark .front .av{background:#fff;color:var(--orange)}
+.tq.dark .back .av{background:var(--orange);color:#fff}
+.tq .flip-ic{position:absolute;right:18px;bottom:16px;font-size:18px;opacity:.45;transition:transform .5s,opacity .3s}
+.tq:hover .flip-ic{opacity:1;transform:rotate(180deg)}
+.q.cta-q{min-height:320px}
+@media (max-width:760px){.tq .tf{padding:30px 22px 24px}.tq .tf p.long{font-size:14px}}
+
+/* bouton langue */
+.lng{display:flex;align-items:center;gap:2px;padding:3px;border-radius:999px;border:1.5px solid var(--orange);margin-right:8px;font-family:var(--mono);font-size:11px;font-weight:800;letter-spacing:.08em;cursor:pointer;background:transparent}
+.lng span{padding:5px 8px;border-radius:999px;color:var(--orange);transition:all .3s}
+.lng span.on{background:var(--orange);color:#fff}
+body.it .lng{border-color:#3BA0FF}body.it .lng span{color:#3BA0FF}body.it .lng span.on{background:#3BA0FF;color:#020A1C}
+@media (max-width:760px){.lng{margin-right:2px;font-size:10px}.lng span{padding:4px 7px}}
+
+.giant .wh,.cbox h2 .wh{color:#fff}
+body.it .giant .wh{color:#9FB6DD}
+
 </style>
 </head>
 <body>
@@ -846,7 +922,7 @@ body.open nav.top{backdrop-filter:none!important;-webkit-backdrop-filter:none!im
     <a href="#it">IT</a><a href="#forme">Je forme</a><a href="#ubiko">Ubiko</a>
     <a href="#clients">Clients</a><a href="#temoignages">Témoignages</a><a href="#contact">Contacts</a>
   </div>
-  <div class="switch"><span class="lab on" id="labC">CRÉA</span><button id="mode" aria-label="Basculer mode Créa / mode IT"></button><span class="lab" id="labI">IT</span>
+  <div class="switch"><button class="lng" id="lng" type="button" aria-label="Switch to English"><span data-l="fr" class="on">FR</span><span data-l="en">EN</span></button><span class="lab on" id="labC">CRÉA</span><button id="mode" aria-label="Basculer mode Créa / mode IT"></button><span class="lab" id="labI">IT</span>
     <button class="burger" id="burger" aria-label="Menu"><span></span></button></div>
 </nav>
 <div class="pager" id="pager"></div>
@@ -888,6 +964,15 @@ body.open nav.top{backdrop-filter:none!important;-webkit-backdrop-filter:none!im
   <div class="pbg"></div>
   <div class="layer ghostw" style="--d:-26;--s:-.15;left:-2%;top:16%">BONJOUR</div>
   <div class="layer ring-l" style="--d:30;right:-80px;top:40%"></div>
+  <div class="xp rv" id="xp">
+    <div class="xp-num" aria-hidden="true"><span class="xp-n" id="xpN">7</span><span class="xp-u" data-i18n="xp.unit">ans</span></div>
+    <div class="xp-txt">
+      <span class="xp-k"><b></b><span data-i18n="xp.kicker">D’expérience</span></span>
+      <p class="xp-h"><span data-i18n="xp.l1">La com qui comprend l’IT.</span><br><em data-i18n="xp.l2">L’IT qui sait communiquer.</em></p>
+      <div class="xp-line" aria-hidden="true"><span class="xp-y0">2019</span><i class="xp-bar"><i class="xp-fill"></i><i class="xp-dot"></i></i><span class="xp-y1" id="xpY">2026</span></div>
+      <p class="xp-s"><span id="xpQ">7 ans à faire parler les marques… et tourner les machines.</span><span class="sr-only" id="xpSr"></span></p>
+    </div>
+  </div>
   <div class="wrap">
     <div class="portrait-stick rv">
       <span class="kicker"><b></b>Introduction</span>
@@ -931,7 +1016,7 @@ body.open nav.top{backdrop-filter:none!important;-webkit-backdrop-filter:none!im
   <div class="layer ghostw" style="--d:-22;--s:-.12;right:-4%;top:8%">SKILLS</div>
   <div class="layer dots-l" style="--d:36;left:4%;bottom:10%"></div>
   <div class="wrap">
-    <div class="head-row"><div><span class="kicker rv"><b></b>Skills</span><h2 class="giant rv">Mes compétences</h2></div>
+    <div class="head-row"><div><span class="kicker rv"><b></b>Skills</span><h2 class="giant rv"><span class="wh">Mes</span> compétences</h2></div>
       <div class="side"><figure class="ph cut rv" data-lbgroup="ph3"><img data-src="img/ph-bureau.webp" alt="Saïdou Hamadou Siddo à son bureau" style="object-position:75% center"></figure><p class="lead rv">Un profil hybride : je pense la stratégie, je fabrique l’image et je fais tourner la technique. Touchez une étiquette pour voir le travail, attrapez-la pour jouer avec.</p></div></div>
     <div class="fams">
       <div class="fam c1 rv"><h3><small>Skills 01</small>Communication</h3><div class="pit">
@@ -1100,7 +1185,7 @@ body.open nav.top{backdrop-filter:none!important;-webkit-backdrop-filter:none!im
   <div class="pbg"></div>
   <div class="layer ghostw" style="--d:-20;--s:-.1;right:-4%;top:6%">&lt;/IT&gt;</div>
   <div class="wrap">
-    <div class="head-row"><div><span class="kicker rv"><b></b>Infrastructure &amp; support</span><h2 class="giant rv">IT_réalisations</h2></div>
+    <div class="head-row"><div><span class="kicker rv"><b></b>Infrastructure &amp; support</span><h2 class="giant rv"><span class="wh">IT_</span>réalisations</h2></div>
       <div class="side"><figure class="ph arch rv" data-lbgroup="ph4"><img data-src="img/ph-laptop.webp" alt="Saïdou Hamadou Siddo au poste de travail" style="object-position:center 25%"></figure><p class="lead rv">La partie qu’on ne voit pas, mais sans laquelle rien ne tourne : stockage, réseau, intranet et support des équipes.</p></div></div>
     <div class="it-grid">
       <div class="term rv"><div class="bar"><i></i><i></i><i></i><span>deploy.log</span></div><pre id="tty2" style="min-height:460px"></pre></div>
@@ -1129,7 +1214,7 @@ body.open nav.top{backdrop-filter:none!important;-webkit-backdrop-filter:none!im
     </div>
     <div>
       <span class="kicker rv"><b></b>Transmettre</span>
-      <h2 class="giant rv">Je forme</h2>
+      <h2 class="giant rv"><span class="wh">Je</span> forme</h2>
       <p class="lead rv">Je forme des équipes, des jeunes et des organisations à des outils concrets, avec des exercices pratiques et des supports adaptés au terrain.</p>
       <div class="tracks">
         <a class="track-c rv" href="#contact"><span class="ico" aria-hidden="true"><svg viewBox="0 0 24 24"><rect x="3" y="4" width="18" height="12" rx="1.5"/><path d="M8 20h8M12 16v4"/><path d="M7 8h6M7 11h10"/></svg></span><div><h4>Informatique &amp; bureautique</h4><p>Prise en main du poste, Word, Excel, PowerPoint, messagerie, bonnes pratiques et sécurité.</p><em class="cta-i">Demander cette formation →</em></div></a>
@@ -1181,7 +1266,7 @@ body.open nav.top{backdrop-filter:none!important;-webkit-backdrop-filter:none!im
   <div class="big20 rv">30+</div>
   <div class="wrap">
     <span class="kicker rv"><b></b>Ils me font confiance</span>
-    <h2 class="giant rv">Clients &amp;<br>partenaires</h2>
+    <h2 class="giant rv">Clients &amp;<br><span class="wh">partenaires</span></h2>
     <p class="lead rv">Entreprises, ONG et institutions au Niger et en Afrique de l’Ouest.</p>
   </div>
   <div class="lmarq" style="margin-top:50px"><div class="track">
@@ -1216,7 +1301,7 @@ body.open nav.top{backdrop-filter:none!important;-webkit-backdrop-filter:none!im
     <div class="me-solo rv"><img class="splat layer" style="--d:24" data-src="img/splash.webp" alt=""><figure class="polar" tabindex="0"><img data-src="img/ph-fauteuil.webp" alt="Saïdou Hamadou Siddo"><figcaption>Hamadou Siddo · Niamey</figcaption></figure></div>
     <div class="cbox">
       <span class="kicker rv"><b></b>Contacts</span>
-      <h2 class="rv">Parlons de<br>votre projet</h2>
+      <h2 class="rv">Parlons de<br><span class="wh">votre projet</span></h2>
       <p class="lead rv">Communication, design, site web, IT ou formation : écrivez-moi, je réponds vite.</p>
       <div class="cgrid">
         <a class="cc wa rv" href="https://wa.me/22790782224" target="_blank" rel="noopener"><small>WhatsApp</small><b>+227 90 78 22 24</b></a>
@@ -1247,7 +1332,7 @@ body.open nav.top{backdrop-filter:none!important;-webkit-backdrop-filter:none!im
     </div>
   </div>
   <div class="nextp"><a class="prev" id="prevP" href="#accueil">← Précédent</a><a id="nextP" href="#intro"><small>PAGE SUIVANTE</small><span id="nextT">Introduction</span> →</a></div>
-  <div class="legal"><span>Copyright lesidd 2026 — Niamey, Niger</span><span id="footmode">Mode Créa</span></div>
+  <div class="legal"><span>Copyright lesidd <span class="yr">2026</span> — Niamey, Niger</span><span id="footmode">Mode Créa</span></div>
 </footer>
 
 <div id="lb"><button class="x">FERMER ✕</button><button class="pv">‹</button><img alt=""><button class="nx">›</button></div>
@@ -1268,18 +1353,22 @@ addEventListener('load',()=>setTimeout(outL,reduce?0:2000));setTimeout(()=>docum
 /* ---------- pages ---------- */
 const pages=$$('.page'),order=pages.map(p=>p.id);
 /* adresses propres (/videos, /contact…) sur le site ; #page dans l'aperçu Claude */
-const framedPg=(()=>{try{return window.self!==window.top}catch(e){return true}})();
-const curRoute=()=>{const p=location.pathname.replace(/^\/+|\/+$/g,'').replace(/\.html$/,'');const h=location.hash.slice(1);
+const framedPg=location.protocol==='file:'||(()=>{try{return window.self!==window.top}catch(e){return true}})();
+const curRoute=()=>{const p=location.pathname.replace(/^\/+|\/+$/g,'').replace(/^en(\/|$)/,'').replace(/(^|\/)index\.html$/,'').replace(/\.html$/,'');const h=location.hash.slice(1);
   const c=(h&&document.getElementById(h)&&document.getElementById(h).classList.contains('page'))?h:(p&&p!=='index'&&document.getElementById(p)?p:'accueil');return c};
+const pageUrl=id=>framedPg?'#'+id:(LANG()==='en'?'/en':'')+(id==='accueil'?'/':'/'+id);
+const LANG=()=>document.documentElement.lang==='en'?'en':'fr';
 const REAL=['branding','visuels','print','web','identites','videos'];
-const title=id=>$('#'+id).dataset.title;
+const EN={"Intro": "Intro", "Accueil": "Home", "Introduction": "Introduction", "Réalisations": "Portfolio", "Je forme": "I train", "Clients": "Clients", "Témoignages": "Testimonials", "Contacts": "Contact", "CRÉA": "CREATIVE", "Essayez le mode IT": "Try IT mode", "Saïdou Hamadou Siddo — communicateur, graphiste, webdesigner, informaticien et formateur à Niamey, Niger": "Saïdou Hamadou Siddo — communications specialist, graphic designer, web designer, IT specialist and trainer in Niamey, Niger", "Créativité": "Creativity", "Constance": "Consistency", "Communicateur · Bilingue FR/ENG · IT": "Communications specialist · Bilingual FR/ENG · IT", "Webdesigner · Graphiste · Formateur": "Web designer · Graphic designer · Trainer", "Qui je suis": "Who I am", "Mes réalisations": "My work", "Côté IT": "The IT side", "CLIQUEZ POUR PEINDRE · CHOISISSEZ UNE PORTE": "CLICK TO PAINT · PICK A DOOR", "BONJOUR": "HELLO", "D’expérience": "Of experience", "La com qui comprend l’IT.": "Communication that speaks tech.", "L’IT qui sait communiquer.": "Tech that knows how to communicate.", "01 / COMMUNICATION": "01 / COMMUNICATION", "Je": "I", "communique.": "communicate.", "Passionné par la communication, j’évolue à la croisée de la communication et de l’informatique. Je pilote la communication interne et externe, de la stratégie à la création, jusqu’à l’animation du site web et des réseaux sociaux.": "Passionate about communication, I work where communication meets IT. I lead internal and external communication, from strategy to creation, all the way to running the website and social media.", "Stratégie": "Strategy", "Réseaux sociaux": "Social media", "Live streaming Pro ↗": "Live streaming Pro ↗", "Couverture médiatique": "Media coverage", "Relations presse": "Press relations", "Voir les visuels →": "See the visuals →", "02 / CRÉATION": "02 / CREATION", "crée.": "create.", "Doté d’un sens artistique affûté, je me spécialise dans la conception graphique et le montage vidéo pour produire des contenus visuels et imprimés percutants, et assurer une visibilité optimale à tous types d’événements.": "With a sharp artistic eye, I specialise in graphic design and video editing to produce striking visual and print content, and to give every kind of event the visibility it deserves.", "Graphisme": "Graphic design", "Vidéo ↗": "Video ↗", "Voir le branding →": "See the branding →", "Je fais tourner": "I keep", "la machine.": "the machine running.", "En complément, j’ai développé une expertise solide en gestion informatique : maintenance, installation et configuration de logiciels, bases de données, serveurs avec sauvegarde et réseaux LAN et WLAN.": "Alongside this, I have built solid expertise in IT management: maintenance, software installation and configuration, databases, servers with backup, and LAN and WLAN networks.", "Réseaux": "Networks", "Serveurs": "Servers", "Entrer côté IT →": "Enter the IT side →", "04 / TRANSMISSION": "04 / TEACHING", "forme.": "train.", "Je transmets ce que je pratique au quotidien : des formations concrètes, en salle ou sur le terrain, pour rendre les équipes autonomes sur leurs outils.": "I pass on what I practise every day: hands-on training, in the classroom or in the field, so teams become self-sufficient with their tools.", "Informatique & bureautique": "Computing & office tools", "Design graphique": "Graphic design", "Intelligence artificielle": "Artificial intelligence", "Voir les formations →": "See the training →", "Visuels web": "Web visuals", "VOIR →": "SEE →", "Supports print": "Print materials", "Projets branding": "Branding projects", "Sites web": "Websites", "Vidéos montées": "Videos edited", "Identités visuelles": "Visual identities", "Mes compétences": "My skills", "Un profil hybride : je pense la stratégie, je fabrique l’image et je fais tourner la technique. Touchez une étiquette pour voir le travail, attrapez-la pour jouer avec.": "A hybrid profile: I think up the strategy, craft the image and keep the tech running. Tap a tag to see the work, grab it to play with it.", "Press relation": "Press relations", "TOUCHER · GLISSER ↔": "TAP · DRAG ↔", "Identité visuelle": "Visual identity", "Formation": "Training", "Réseaux LAN/WLAN": "LAN/WLAN networks", "NAS & sauvegardes": "NAS & backups", "Bases de données": "Databases", "Kakémono · banderole · t-shirt · gilet · sac · écharpe · mug · stylos · branding intérieur et extérieur · bloc-notes": "Roll-up banner · banner · t-shirt · vest · bag · scarf · mug · pens · indoor and outdoor branding · notepads", "Polos": "Polo shirts", "Kakémonos": "Roll-up banners", "Gilets": "Vests", "Stylos": "Pens", "Sacs": "Bags", "Pochons": "Drawstring bags", "Chasubles": "Bibs", "Habillage d’accueil": "Reception branding", "Branding extérieur": "Outdoor branding", "Branding intérieur": "Indoor branding", "Habillage intérieur": "Interior branding", "Textile · sponsoring": "Textile · sponsorship", "Maillot": "Jersey", "Kit complet maillots et shorts, sponsorisé par l’ONG PetitPouss. Choisissez une couleur pour essayer la tenue.": "Full kit of jerseys and shorts, sponsored by the NGO PetitPouss. Pick a colour to try the outfit.", "Short": "Shorts", "Tous formats réseaux sociaux · formats web · formats Ads. Survolez pour mettre en pause, cliquez pour agrandir.": "All social media formats · web formats · ad formats. Hover to pause, click to enlarge.", "Supports print / web": "Print / web materials", "Flyers · magazines · newsletters · brochures · dépliants · kakémonos · bulletins d’information": "Flyers · magazines · newsletters · brochures · leaflets · roll-up banners · bulletins", "Site one page · site vitrine · site institutionnel · e-commerce · intranet": "One-page site · showcase site · institutional site · e-commerce · intranet", "Table ronde des investisseurs — GOV": "Investors’ round table — GOV", "Clients web": "Web clients", "archivé": "archived", "Notre-Dame de La Flèche — école française": "Notre-Dame de La Flèche — French school", "Votre site est le prochain →": "Your website is next →", "Logo · charte graphique · charte dédiée à un événement ou une activité d’envergure": "Logo · brand guidelines · dedicated guidelines for a major event or activity", "Votre logo ici ?": "Your logo here?", "Créons votre identité visuelle →": "Let’s create your visual identity →", "Lives stream": "Live streams", "Montage · documentaire · reportage · storytelling · live streaming multi-caméra. Cliquez sur une vidéo pour la lancer.": "Editing · documentary · reporting · storytelling · multi-camera live streaming. Click a video to play it.", "Infrastructure & support": "Infrastructure & support", "IT_réalisations": "IT_projects", "La partie qu’on ne voit pas, mais sans laquelle rien ne tourne : stockage, réseau, intranet et support des équipes.": "The part you don’t see, but without which nothing runs: storage, network, intranet and team support.", "EN SERVICE": "IN SERVICE", "Helpdesk de plus de 20 agents": "Helpdesk for 20+ staff", "Support utilisateurs au quotidien, sur site et à distance (remote) : diagnostic, dépannage, installation et suivi des postes.": "Day-to-day user support, on site and remotely: diagnosis, troubleshooting, installation and workstation follow-up.", "$ besoin_de_support --contact →": "$ need_support --contact →", "DÉPLOYÉ": "DEPLOYED", "Déploiement d’un NAS local": "Local NAS deployment", "Stockage centralisé, partage de fichiers et sauvegardes pour l’équipe.": "Centralised storage, file sharing and backups for the team.", "→ en parler": "→ let’s talk", "CONFIGURÉ": "CONFIGURED", "Intranet d’entreprise": "Company intranet", "Configuration d’un système intranet : accès, comptes et partage interne.": "Setting up an intranet system: access, accounts and internal sharing.", "OPÉRATIONNEL": "OPERATIONAL", "Réseaux LAN & WLAN": "LAN & WLAN networks", "Câblage, configuration et sécurisation des réseaux filaires et Wi-Fi.": "Cabling, configuration and security of wired and Wi-Fi networks.", "SAUVEGARDÉ": "BACKED UP", "Serveurs & bases de données": "Servers & databases", "Déploiement de serveurs, bases de données et politique de sauvegarde.": "Deployment of servers, databases and backup policy.", "→ former mon équipe": "→ train my team", "TRANSMETTRE": "TEACH", "Transmettre": "Teaching", "Je forme des équipes, des jeunes et des organisations à des outils concrets, avec des exercices pratiques et des supports adaptés au terrain.": "I train teams, young people and organisations on practical tools, with hands-on exercises and materials adapted to real-world conditions.", "Prise en main du poste, Word, Excel, PowerPoint, messagerie, bonnes pratiques et sécurité.": "Getting started with the computer, Word, Excel, PowerPoint, email, good practices and security.", "Demander cette formation →": "Request this training →", "Bases du design, Canva et Photoshop, créer des visuels cohérents pour les réseaux et l’impression.": "Design basics, Canva and Photoshop: creating consistent visuals for social media and print.", "Maîtriser et sécuriser l’usage des IA : prompts efficaces, usages professionnels et risques à connaître.": "Mastering and securing the use of AI: effective prompts, professional uses and risks to know.", "Fondateur & Directeur Général": "Founder & CEO", "La TV partout avec vous, pour vous.": "TV everywhere with you, for you.", "L’actualité, la culture, le divertissement et l’institutionnel réunis sur une seule plateforme. Une Web TV basée à Niamey, pensée comme le média d’impact, d’élimination des tabous et d’éveil de la jeunesse.": "News, culture, entertainment and institutional content brought together on a single platform. A Web TV based in Niamey, designed as a media for impact, for breaking taboos and for awakening young people.", "L’équipe": "The team", "Une équipe de jeunes passionnés": "A team of passionate young people", "Derrière Ubiko, une équipe de jeunes Nigériens passionnés d’image, de récit et de terrain. Ils racontent leur pays avec leurs codes et leur énergie, et donnent la parole à ceux qu’on entend peu.": "Behind Ubiko is a team of young Nigeriens passionate about images, storytelling and fieldwork. They tell their country’s story in their own way and with their own energy, and give a voice to those rarely heard.", "Jeunesse & prise de conscience": "Youth & awareness", "Culture et patrimoine": "Culture and heritage", "Divertissement utile": "Meaningful entertainment", "Institutionnel & développement": "Institutional & development", "Actualité réactive": "Responsive news", "Découvrir Ubiko →": "Discover Ubiko →", "Site web": "Website", "Actualité · Culture et patrimoine · Divertissement utile · Institutionnel · Jeunesse · Niamey, Niger · La TV partout avec vous, pour vous. ·": "News · Culture and heritage · Meaningful entertainment · Institutional · Youth · Niamey, Niger · TV everywhere with you, for you. ·", "WEB TV EN LANCEMENT": "WEB TV LAUNCHING", "Ils me font confiance": "They trust me", "Clients &": "Clients &", "partenaires": "partners", "Entreprises, ONG et institutions au Niger et en Afrique de l’Ouest.": "Companies, NGOs and institutions in Niger and West Africa.", "VOIR": "SEE", "Ce que j’ai fait pour eux": "What I did for them", "LIRE": "READ", "Ce qu’ils en disent": "What they say", "REJOINDRE": "JOIN", "La liste des clients": "The client list", "Parlons de": "Let’s talk about", "votre projet": "your project", "Communication, design, site web, IT ou formation : écrivez-moi, je réponds vite.": "Communication, design, website, IT or training: write to me, I reply fast.", "Téléphone": "Phone", "Enregistrer": "Save", "Ajouter mon contact au téléphone ↓": "Add my contact to your phone ↓", "Disponible pour vos projets": "Available for your projects", "IT & réseaux": "IT & networks", "Votre projet mérite": "Your project deserves", "d’être vu.": "to be seen.", "Pas dans six mois.": "Not in six months.", "Mais, maintenant !": "But right now!", "Un événement à couvrir, une campagne à lancer, un site à refaire ou un réseau à remettre d’aplomb : chaque semaine sans visibilité est une semaine offerte à vos concurrents. Parlons-en aujourd’hui.": "An event to cover, a campaign to launch, a website to rebuild or a network to fix: every week without visibility is a week handed to your competitors. Let’s talk today.", "Réponse rapide sur WhatsApp": "Fast reply on WhatsApp", "Lancer mon projet maintenant": "Start my project now", "Écrire un e-mail": "Send an email", "← Précédent": "← Previous", "PAGE SUIVANTE": "NEXT PAGE", "Mode Créa": "Creative mode", "Mode IT · système opérationnel": "IT mode · system operational", "FERMER ✕": "CLOSE ✕", "Chargement": "Loading", "Basculer mode Créa / mode IT": "Switch Creative / IT mode", "Saïdou Hamadou Siddo, pensif": "Saïdou Hamadou Siddo, thoughtful", "Saïdou Hamadou Siddo au micro, en panel": "Saïdou Hamadou Siddo speaking on a panel", "Saïdou Hamadou Siddo devant son ordinateur": "Saïdou Hamadou Siddo at his computer", "Saïdou Hamadou Siddo à son bureau": "Saïdou Hamadou Siddo at his desk", "Saïdou Hamadou Siddo au poste de travail": "Saïdou Hamadou Siddo at his workstation", "Polos brodés": "Embroidered polo shirts", "Mugs personnalisés": "Custom mugs", "Habillage mural d'accueil": "Reception wall branding", "Façade et enseigne": "Facade and signage", "Mur des valeurs": "Values wall", "Habillage vitré intérieur — P’tit Pouss": "Interior window branding — P’tit Pouss", "Maillot jaune FC Sabara": "FC Sabara yellow jersey", "Maillot rose FC Sabara": "FC Sabara pink jersey", "Maillot gris gardien FC Sabara": "FC Sabara grey goalkeeper jersey", "Short noir et jaune": "Black and yellow shorts", "Short noir et blanc": "Black and white shorts", "Jaune": "Yellow", "Rose": "Pink", "Gris gardien": "Goalkeeper grey", "Kakémono Wassi — vente et location de voitures": "Wassi roll-up banner — car sales and rental", "Couverture Camp'Lettres": "Camp'Lettres cover", "Dépliant service traiteur": "Catering leaflet", "Dépliant ouvert": "Open leaflet", "Rapport annuel 2023": "2023 annual report", "Dépliant trois volets": "Tri-fold leaflet", "FAD News, numéro suivant": "FAD News, next issue", "Kakémono Drepapouss": "Drepapouss roll-up banner", "Site de l'ONG MELEN": "NGO MELEN website", "Site de la Table ronde des investisseurs": "Investors’ round table website", "Site Notre-Dame de La Flèche": "Notre-Dame de La Flèche website", "Site Sixième Sens": "Sixième Sens website", "Identités": "Identities", "Vidéos": "Videos", "Formation sur tablettes": "Training on tablets", "Formation en salle": "Classroom training", "Atelier de co-création": "Co-creation workshop", "Accompagnement d’un groupe de travail": "Supporting a working group", "Intervention au micro": "Speaking at the microphone", "Site web Ubiko": "Ubiko website", "Précédent": "Previous", "Suivant": "Next", "Documentaire": "Documentary", "Visite terrain": "Field visit", "Rapport / Capitalisation": "Report / Lessons learned", "Clip vidéo": "Music video", "Documentaire / reportage": "Documentary / report", "Débat citoyen — Zinder": "Citizen debate — Zinder", "Side event DDR — forum de l’AES": "DDR side event — AES forum", "Tous": "All", "Lien bientôt disponible": "Link coming soon", "Copié : ": "Copied: ", "Fiche contact copiée": "Contact card copied", "Fiche contact téléchargée": "Contact card downloaded", "Téléchargement indisponible ici": "Download unavailable here", "Vidéo bientôt disponible": "Video coming soon", "Fermer": "Close", "Retourner pour voir l’autre langue": "Flip to see the other language", "Découvrez qui je suis - Portfolio": "Discover who I am - Portfolio", "Mes": "My", "compétences": "skills", "IT_": "IT_", "réalisations": "projects", "forme": "train"};
+const tr=s=>LANG()==='en'&&EN[s]!=null?EN[s]:s;
+const title=id=>tr($('#'+id).dataset.title);
 /* chargement des images page par page (plus léger sur mobile) */
 const hydrate=p=>{if(!p||p._hyd)return;p._hyd=true;const bg=p.dataset.bg,pb=$('.pbg',p);if(bg&&pb)pb.style.backgroundImage=`url(img/${bg}.webp)`;
   $$('img[data-src]',p).forEach(i=>{i.src=i.dataset.src;i.removeAttribute('data-src')})};
 /* sous-nav réalisations */
-$$('.subnav').forEach(n=>n.innerHTML=REAL.map((r,i)=>`<a href="#${r}"><b>0${i+1}</b>${title(r)}</a>`).join(''));
-/* pager */
-$('#pager').innerHTML=order.map(id=>`<a href="#${id}" aria-label="${title(id)}"><span>${title(id)}</span></a>`).join('');
+const buildNav=()=>{$$('.subnav').forEach(n=>n.innerHTML=REAL.map((r,i)=>`<a href="#${r}"><b>0${i+1}</b>${title(r)}</a>`).join(''));
+  $('#pager').innerHTML=order.map(id=>`<a href="#${id}" aria-label="${title(id)}"><span>${title(id)}</span></a>`).join('')};
+buildNav();
 
 const placers=[];let cur=null;
 const io=new IntersectionObserver(es=>es.forEach(e=>{if(e.isIntersecting){e.target.classList.add('in');io.unobserve(e.target)}}),{threshold:.08,rootMargin:'0px 0px -4% 0px'});
@@ -1295,18 +1384,19 @@ function show(id){
   $$('.menu a').forEach(a=>{const h=a.getAttribute('href').slice(1);a.classList.toggle('on',h===id||(a.dataset.group==='real'&&REAL.includes(id)))});
   $$('.subnav a').forEach(a=>a.classList.toggle('on',a.getAttribute('href')==='#'+id));
   $$('#pager a').forEach(a=>a.classList.toggle('on',a.getAttribute('href')==='#'+id));
-  document.title='Découvrez qui je-suis - Portfolio';
+  document.title=tr('Découvrez qui je suis - Portfolio');
   blobs=[];
   requestAnimationFrame(()=>placers.forEach(f=>f()));
-  if(id==='it')typeInto($('#tty2'),T2);
+  if(id==='it')typeInto($('#tty2'),LANG()==='en'?T2en:T2);
   if(id==='intro')runCounters();
+  if(id==='temoignages')autoFlipTesti();
   document.body.classList.remove('open');
 }
 let wx='50%',wy='50%',busy=false;
 document.addEventListener('click',e=>{const a=e.target.closest('a[href^="#"]');if(a){wx=e.clientX+'px';wy=e.clientY+'px'}},true);
 let go=function(id){
   if(!$('#'+id)||id===cur)return;
-  const url=framedPg?'#'+id:(id==='accueil'?'/':'/'+id);if(curRoute()!==id){history.pushState(null,'',url)}
+  const url=pageUrl(id);if(curRoute()!==id){history.pushState(null,'',url)}
   transition(id);
 }
 function transition(id){
@@ -1333,12 +1423,14 @@ if(!reduce){
 }
 
 /* mode switch */
-const setMode=it=>{document.body.classList.toggle('it',it);$('#labC').classList.toggle('on',!it);$('#labI').classList.toggle('on',it);$('#footmode').textContent=it?'Mode IT · système opérationnel':'Mode Créa';try{localStorage.setItem('shs-mode',it?'it':'crea')}catch(e){};if(it)typeInto($('#tty'),T1)};
+const setMode=it=>{document.body.classList.toggle('it',it);$('#labC').classList.toggle('on',!it);$('#labI').classList.toggle('on',it);$('#footmode').textContent=tr(it?'Mode IT · système opérationnel':'Mode Créa');try{localStorage.setItem('shs-mode',it?'it':'crea')}catch(e){};if(it)typeInto($('#tty'),LANG()==='en'?T1en:T1)};
 $('#mode').onclick=()=>setMode(!document.body.classList.contains('it'));
 
 /* terminals */
-const T1=[['<span class="b">saidou@niamey</span>:~$ whoami',300],['Saïdou Hamadou Siddo',0],['<span class="o">communicateur</span> · graphiste · webdesigner · IT · formateur',500],['',0],['<span class="b">saidou@niamey</span>:~$ cat stats.json',300],['{ "visuels_web": 300, "print": 80, "branding": 40,',0],['  "sites_web": 20, "identites": 10, "clients": 30 }',500],['',0],['<span class="b">saidou@niamey</span>:~$ ./lancer_portfolio.sh --mode=it',300],['<span class="g">[OK]</span> Réseau LAN/WLAN ............ en ligne',150],['<span class="g">[OK]</span> NAS local ................... monté',150],['<span class="g">[OK]</span> Intranet entreprise ......... actif',150],['<span class="g">[OK]</span> Helpdesk 20+ agents ......... connecté',150],['<span class="o">→ Choisissez une porte ci-dessous. Repassez en mode CRÉA quand vous voulez.</span>',0]];
+const T1=[['<span class="b">saidou@niamey</span>:~$ whoami',300],['Saïdou Hamadou Siddo',0],['<span class="o">communicateur</span> · graphiste · webdesigner · IT · formateur',500],['',0],['<span class="b">saidou@niamey</span>:~$ cat stats.json',300],['{ "visuels_web": 300, "print": 80, "branding": 40,',0],['  "sites_web": 20, "identites": 10, "clients": 30, "experience": "depuis 2019" }',500],['',0],['<span class="b">saidou@niamey</span>:~$ ./lancer_portfolio.sh --mode=it',300],['<span class="g">[OK]</span> Réseau LAN/WLAN ............ en ligne',150],['<span class="g">[OK]</span> NAS local ................... monté',150],['<span class="g">[OK]</span> Intranet entreprise ......... actif',150],['<span class="g">[OK]</span> Helpdesk 20+ agents ......... connecté',150],['<span class="o">→ Choisissez une porte ci-dessous. Repassez en mode CRÉA quand vous voulez.</span>',0]];
 const T2=[['$ ssh admin@nas.local',250],['<span class="g">Connexion établie.</span> RAID actif · sauvegarde nocturne planifiée',350],['$ systemctl status intranet',250],['<span class="g">● intranet.service — actif (running)</span>',350],['$ ping -c 3 passerelle.lan',250],['64 octets : temps=1.2 ms',80],['64 octets : temps=1.1 ms',80],['64 octets : temps=1.3 ms · <span class="g">0 % de perte</span>',350],['$ helpdesk --tickets --today',250],['<span class="o">#214</span> imprimante réseau ....... <span class="g">résolu</span>',120],['<span class="o">#215</span> accès VPN (remote) ...... <span class="g">résolu</span>',120],['<span class="o">#216</span> poste lent .............. <span class="g">résolu</span>',120],['<span class="o">#217</span> compte intranet ......... <span class="g">créé</span>',350],['$ backup --verify',250],['<span class="g">✔ Sauvegarde vérifiée</span> · intégrité 100 %',0]];
+const T1en=[['<span class="b">saidou@niamey</span>:~$ whoami',300],['Saïdou Hamadou Siddo',0],['<span class="o">communications specialist</span> · graphic designer · web designer · IT · trainer',500],['',0],['<span class="b">saidou@niamey</span>:~$ cat stats.json',300],['{ "web_visuals": 300, "print": 80, "branding": 40,',0],['  "websites": 20, "identities": 10, "clients": 30, "experience": "since 2019" }',500],['',0],['<span class="b">saidou@niamey</span>:~$ ./launch_portfolio.sh --mode=it',300],['<span class="g">[OK]</span> LAN/WLAN network ........... online',150],['<span class="g">[OK]</span> Local NAS .................. mounted',150],['<span class="g">[OK]</span> Company intranet ........... active',150],['<span class="g">[OK]</span> Helpdesk 20+ staff ......... connected',150],['<span class="o">→ Pick a door below. Switch back to CREATIVE mode any time.</span>',0]];
+const T2en=[['$ ssh admin@nas.local',250],['<span class="g">Connection established.</span> RAID active · nightly backup scheduled',350],['$ systemctl status intranet',250],['<span class="g">● intranet.service — active (running)</span>',350],['$ ping -c 3 gateway.lan',250],['64 bytes: time=1.2 ms',80],['64 bytes: time=1.1 ms',80],['64 bytes: time=1.3 ms · <span class="g">0 % packet loss</span>',350],['$ helpdesk --tickets --today',250],['<span class="o">#214</span> network printer ......... <span class="g">resolved</span>',120],['<span class="o">#215</span> VPN access (remote) ...... <span class="g">resolved</span>',120],['<span class="o">#216</span> slow workstation ........ <span class="g">resolved</span>',120],['<span class="o">#217</span> intranet account ........ <span class="g">created</span>',350],['$ backup --verify',250],['<span class="g">✔ Backup verified</span> · 100 % integrity',0]];
 function typeInto(el,lines){if(!el||el._busy)return;el._busy=true;el.innerHTML='';let i=0,c=0,cur='';
   const strip=s=>s.replace(/<[^>]+>/g,'');
   const step=()=>{if(i>=lines.length){el.innerHTML=cur+'<span class="caret"></span>';return}
@@ -1403,10 +1495,32 @@ $$('.quotes').forEach(el=>{let d=false,sx,sl,moved=false;
   el.addEventListener('click',e=>{if(moved){e.stopPropagation();e.preventDefault()}},true)});
 
 /* témoignages (texte provisoire) */
-const star='<svg viewBox="0 0 24 24"><path d="M12 2l3 6.9 7.5.7-5.7 5 1.7 7.4L12 18.3 5.5 22l1.7-7.4-5.7-5 7.5-.7z"/></svg>';
-const T=[['A.B','Nom du client','Fonction, organisation',5],['C.D','Nom du client','Fonction, organisation',5],['E.F','Nom du client','Fonction, organisation',4],['G.H','Nom du client','Fonction, organisation',5],['I.J','Nom du client','Fonction, organisation',5]];
-$('#quotes').innerHTML=T.map((t,i)=>`<article class="q${i%3===1?' dark':''}"><span class="mark">”</span><div class="stars">${Array.from({length:5},(_,k)=>star.replace('<svg',k<t[3]?'<svg':'<svg class="off"')).join('')}</div><p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation.</p><div class="who"><span class="av"><svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="8.6" r="4.4"/><path d="M3.6 21.5c.6-4.6 4.1-7.4 8.4-7.4s7.8 2.8 8.4 7.4z"/></svg></span><div><b>${t[1]}</b><small>${t[2]}</small></div></div></article>`).join('')
- +`<a class="q cta-q" href="#contact"><span class="mark">+</span><p style="font-size:clamp(22px,2vw,30px);font-weight:800;line-height:1.15">Votre avis sera le prochain.</p><p>Travaillons ensemble, puis racontez-le ici.</p><span class="go" style="color:#fff;border-color:#fff">Démarrer un projet →</span></a>`;
+/* témoignages : cartes recto (original) / verso (traduction) */
+const SIL='<svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="8.6" r="4.4"/><path d="M3.6 21.5c.6-4.6 4.1-7.4 8.4-7.4s7.8 2.8 8.4 7.4z"/></svg>';
+const TESTI=[
+ {name:'Mariama Mamoudou Djibo',role:{fr:'Directrice des Programmes — ONG FAD',en:'Programmes Director — NGO FAD'},
+  fr:'J’ai eu le plaisir de collaborer avec Hamadou Siddo, dans le cadre de ses fonctions de chargé de communication à l’ONG FAD. Professionnel polyvalent, créatif et particulièrement ingénieux, il se distingue par sa maîtrise de la communication institutionnelle et digitale, de la conception graphique, mais également des outils informatiques et techniques. Sa capacité remarquable à trouver des solutions, à innover et à réaliser en interne des prestations habituellement externalisées a constitué une véritable valeur ajoutée pour notre organisation, tant en matière de qualité que d’optimisation des ressources.',
+  en:'I had the pleasure of working with Hamadou Siddo in his role as Communications Officer at the NGO FAD. A versatile, creative and particularly resourceful professional, he stands out for his command of institutional and digital communication, graphic design, as well as IT and technical tools. His remarkable ability to find solutions, innovate and deliver in-house services that are usually outsourced has been real added value for our organisation, in terms of both quality and resource optimisation.'},
+ {name:'Dr. Boubacar Amadou Samiratou',role:{fr:'Directrice Exécutive — GEMS',en:'Executive Director — GEMS'},
+  fr:'Ses créations et les visuels sont toujours d’une sophistication et d’une élégance incroyable.',
+  en:'His creations and visuals are always incredibly sophisticated and elegant.'},
+ {name:'Maria Middah',role:{fr:'Présidente — COJEFIL',en:'President — COJEFIL'},
+  fr:'Un excellent formateur en termes de communication IT et un excellent bosseur.',
+  en:'An excellent trainer when it comes to IT communication, and an outstanding hard worker.'}
+];
+function tqSet(c,back){const inn=$('.tq-in',c);if(!inn)return;c.classList.toggle('flip',back);inn.style.transform=back?'rotateY(180deg)':'rotateY(0deg)'}
+function renderTesti(){const L=LANG(),O=L==='en'?'en':'fr',X=O==='en'?'fr':'en';
+ const face=(t,lang,cls,i)=>`<div class="tf ${cls}"><span class="mark">”</span><span class="tl">${lang.toUpperCase()}</span><p class="${t[lang].length>300?'long':''}">${t[lang]}</p>${lang!=='fr'?`<span class="tr">${L==='en'?'Translated from French':'Traduit du français'}</span>`:''}<div class="who"><span class="av">${SIL}</span><div><b>${t.name}</b><small>${t.role[L]}</small></div></div><span class="flip-ic" aria-hidden="true">↻</span></div>`;
+ $('#quotes').innerHTML=TESTI.map((t,i)=>`<article class="q tq${i%3===1?' dark':''}" tabindex="0" role="button" aria-label="${L==='en'?'Flip to see the other language':'Retourner pour voir l’autre langue'}"><div class="tq-in">${face(t,O,'front',i)}${face(t,X,'back',i)}</div></article>`).join('')
+ +`<a class="q cta-q" href="#contact"><span class="mark">+</span><p style="font-size:clamp(22px,2vw,30px);font-weight:800;line-height:1.15">${L==='en'?'Your review could be next.':'Votre avis sera le prochain.'}</p><p>${L==='en'?'Let’s work together, then tell the story here.':'Travaillons ensemble, puis racontez-le ici.'}</p><span class="go" style="color:#fff;border-color:#fff">${L==='en'?'Start a project →':'Démarrer un projet →'}</span></a>`;
+ $$('.tq').forEach(c=>{const f=()=>{c._touched=true;tqSet(c,!c.classList.contains('flip'))};c.addEventListener('click',f);c.addEventListener('keydown',e=>{if(e.key==='Enter'||e.key===' '){e.preventDefault();f()}})});
+}
+renderTesti();
+let tqAuto=false;
+function autoFlipTesti(){if(tqAuto||reduce)return;tqAuto=true;
+  setTimeout(()=>{if(cur!=='temoignages')return;const cs=$$('.tq');
+    cs.forEach((c,i)=>setTimeout(()=>{if(!c._touched)tqSet(c,true)},i*350));
+    cs.forEach((c,i)=>setTimeout(()=>{if(!c._touched)tqSet(c,false)},5000+cs.length*350+(cs.length-1-i)*350))},5000)}
 const qs=$('#quotes');$('#qnext').onclick=()=>qs.scrollBy({left:qs.clientWidth*.8,behavior:'smooth'});$('#qprev').onclick=()=>qs.scrollBy({left:-qs.clientWidth*.8,behavior:'smooth'});
 
 /* lightbox */
@@ -1418,12 +1532,12 @@ lb.onclick=e=>{if(e.target===lb)lb.classList.remove('on')};
 addEventListener('keydown',e=>{if(!lb.classList.contains('on'))return;if(e.key==='Escape')lb.classList.remove('on');if(e.key==='ArrowRight')showI(ix+1);if(e.key==='ArrowLeft')showI(ix-1)});
 
 /* liens à venir, copie, vCard */
-$$('[data-soon]').forEach(a=>a.addEventListener('click',e=>{if(a.getAttribute('href')==='#'){e.preventDefault();e.stopPropagation();toast('Lien bientôt disponible')}}));
-$$('[data-copy]').forEach(b=>b.addEventListener('click',async()=>{try{await navigator.clipboard.writeText(b.dataset.copy);toast('Copié : '+b.dataset.copy)}catch(e){toast(b.dataset.copy)}}));
+$$('[data-soon]').forEach(a=>a.addEventListener('click',e=>{if(a.getAttribute('href')==='#'){e.preventDefault();e.stopPropagation();toast(tr('Lien bientôt disponible'))}}));
+$$('[data-copy]').forEach(b=>b.addEventListener('click',async()=>{try{await navigator.clipboard.writeText(b.dataset.copy);toast(tr('Copié : ')+b.dataset.copy)}catch(e){toast(b.dataset.copy)}}));
 $('#vcard').onclick=()=>{const v=['BEGIN:VCARD','VERSION:3.0','N:Hamadou Siddo;Saïdou;;;','FN:Saïdou Hamadou Siddo','TITLE:Communicateur · Graphiste · Webdesigner · IT · Formateur','TEL;TYPE=CELL:+22790782224','TEL;TYPE=CELL:+22798615420','EMAIL:contact@siddo.me','ADR;TYPE=WORK:;;;Niamey;;;Niger','END:VCARD'].join('\r\n');
   const framed=(()=>{try{return window.self!==window.top}catch(e){return true}})();
-  if(framed){navigator.clipboard&&navigator.clipboard.writeText(v).then(()=>toast('Fiche contact copiée'),()=>toast('+227 90 78 22 24'));return}
-  try{const a=document.createElement('a');a.href=URL.createObjectURL(new Blob([v],{type:'text/vcard'}));a.download='Saidou-Hamadou-Siddo.vcf';document.body.appendChild(a);a.click();a.remove();toast('Fiche contact téléchargée')}catch(e){toast('Téléchargement indisponible ici')}};
+  if(framed){navigator.clipboard&&navigator.clipboard.writeText(v).then(()=>toast(tr('Fiche contact copiée')),()=>toast('+227 90 78 22 24'));return}
+  try{const a=document.createElement('a');a.href=URL.createObjectURL(new Blob([v],{type:'text/vcard'}));a.download='Saidou-Hamadou-Siddo.vcf';document.body.appendChild(a);a.click();a.remove();toast(tr('Fiche contact téléchargée'))}catch(e){toast(tr('Téléchargement indisponible ici'))}};
 
 /* ---------- vidéos : ajouter une ligne pour ajouter une vidéo ---------- */
 const VIDEOS=[
@@ -1467,9 +1581,41 @@ const _go=go;go=function(id){_go(id);nav0++;if(nav0===4||nav0===9)setTimeout(bub
 /* polaroïd contact : animation au toucher */
 $$('.polar').forEach(p=>{const t=()=>{p.classList.remove('tap');void p.offsetWidth;p.classList.add('tap');clearTimeout(p._t);p._t=setTimeout(()=>p.classList.remove('tap'),1400)};p.addEventListener('click',t);p.addEventListener('keydown',e=>{if(e.key==='Enter')t()})});
 
+/* années d'expérience + copyright : calculés à chaque visite */
+const XP_START=2019;
+function updYears(){const y=new Date().getFullYear(),n=y-XP_START;
+  $('#xpN').textContent=n;$('#xpY').textContent=y;
+  const u=$('.xp-u');if(u)u.textContent=LANG()==='en'?(n>1?'years':'year'):(n>1?'ans':'an');
+  $('#xpSr').textContent=LANG()==='en'?`${n} years of experience`:`${n} ans d’expérience`;
+  $$('.yr').forEach(s=>s.textContent=y);
+  const q=$('#xpQ');if(q)q.textContent=LANG()==='en'?`${n} years making brands speak… and keeping the machines running.`:`${n} ans à faire parler les marques… et tourner les machines.`;
+  const t=$('#chiffres')&&null}
+updYears();
+
+/* ---------- langue FR / EN ---------- */
+const ORIG=new WeakMap();
+function walkTr(L){const w=document.createTreeWalker(document.body,NodeFilter.SHOW_TEXT,{acceptNode:n=>{const p=n.parentElement;if(!p||p.closest('script,style,#tty,#tty2,#quotes,.xp-u,#xpQ,#xpN,#xpY,.yr'))return NodeFilter.FILTER_REJECT;return n.nodeValue.trim()?NodeFilter.FILTER_ACCEPT:NodeFilter.FILTER_SKIP}});
+  let n;while(n=w.nextNode()){if(!ORIG.has(n))ORIG.set(n,n.nodeValue);const o=ORIG.get(n),k=o.trim().replace(/\s+/g,' ');
+    if(L==='en'&&EN[k]!=null){const m=o.match(/^(\s*)[\s\S]*?(\s*)$/);n.nodeValue=m[1]+EN[k]+m[2]}else n.nodeValue=o}
+  $$('[alt],[aria-label],[title]').forEach(el=>{if(el.closest('script'))return;['alt','aria-label','title'].forEach(at=>{if(!el.hasAttribute(at))return;const key='fr'+at.replace('-','');
+    if(el.dataset[key]==null)el.dataset[key]=el.getAttribute(at);const o=el.dataset[key];el.setAttribute(at,L==='en'&&EN[o]!=null?EN[o]:o)})})}
+function applyLang(L,push){document.documentElement.lang=L;try{localStorage.setItem('shs-lang',L)}catch(e){}
+  walkTr(L);buildNav();renderTesti();updYears();
+  $('#footmode').textContent=tr(document.body.classList.contains('it')?'Mode IT · système opérationnel':'Mode Créa');
+  $$('#lng span').forEach(s=>s.classList.toggle('on',s.dataset.l===L));$('#lng').setAttribute('aria-label',L==='en'?'Passer en français':'Switch to English');
+  if(cur){const i=order.indexOf(cur),nx=order[(i+1)%order.length],pv=order[(i-1+order.length)%order.length];$('#nextT').textContent=title(nx);$('#prevP').textContent='← '+title(pv);
+    $$('.subnav a').forEach(a=>a.classList.toggle('on',a.getAttribute('href')==='#'+cur));$$('#pager a').forEach(a=>a.classList.toggle('on',a.getAttribute('href')==='#'+cur));document.title=tr('Découvrez qui je suis - Portfolio');
+    if(push&&!framedPg)history.replaceState(null,'',pageUrl(cur))}
+  ['#tty','#tty2'].forEach(s=>{const el=$(s);if(el&&el.innerHTML){el._busy=false;typeInto(el,s==='#tty'?(L==='en'?T1en:T1):(L==='en'?T2en:T2))}});
+  requestAnimationFrame(()=>placers.forEach(f=>f()))}
+$('#lng').addEventListener('click',()=>applyLang(LANG()==='en'?'fr':'en',true));
+{const pathEn=/^\/en(\/|$)/.test(location.pathname);let st=null;try{st=localStorage.getItem('shs-lang')}catch(e){}
+ const nav=(navigator.languages&&navigator.languages[0]||navigator.language||'fr').toLowerCase();
+ const L=pathEn?'en':(st||(nav.startsWith('en')?'en':'fr'));if(L==='en')applyLang('en',false);else document.documentElement.lang='fr';}
+
 /* démarrage */
 try{if(localStorage.getItem('shs-mode')==='it')setMode(true)}catch(e){}
-{const r=curRoute();show(r);if(!framedPg&&location.hash&&$('#'+r))history.replaceState(null,'',r==='accueil'?'/':'/'+r)}
+{const r=curRoute();show(r);if(!framedPg&&(location.hash||location.pathname!==pageUrl(r)))history.replaceState(null,'',pageUrl(r))}
 })();
 
 </script>
