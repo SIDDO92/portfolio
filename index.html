@@ -21,7 +21,7 @@
 <meta property="og:image:width" content="1200"><meta property="og:image:height" content="630">
 <meta name="twitter:card" content="summary_large_image">
 <meta name="twitter:image" content="https://saidsiddo.netlify.app/og-cover-2.jpg">
-<script type="application/ld+json">{"@context": "https://schema.org", "@type": "Person", "name": "Saïdou Hamadou Siddo", "alternateName": "Hamadou Siddo", "jobTitle": "Communicateur, graphiste, webdesigner, informaticien et formateur", "email": "mailto:said@siddo.me", "telephone": "+227 90 78 22 24", "address": {"@type": "PostalAddress", "addressLocality": "Niamey", "addressCountry": "NE"}, "knowsLanguage": ["fr", "en"], "knowsAbout": ["Communication", "Communication événementielle 360", "Live streaming", "Graphisme", "Branding", "Identité visuelle", "Webdesign", "WordPress", "Montage vidéo", "Réseaux informatiques", "Helpdesk", "Formation en bureautique", "Formation en intelligence artificielle"], "worksFor": {"@type": "Organization", "name": "Ubiko Media TV"}, "url": "https://saidsiddo.netlify.app/", "image": "https://saidsiddo.netlify.app/og-cover-2.jpg"}</script>
+<script type="application/ld+json">{"@context": "https://schema.org", "@type": "Person", "name": "Saïdou Hamadou Siddo", "alternateName": "Hamadou Siddo", "jobTitle": "Communicateur, graphiste, webdesigner, informaticien et formateur", "email": "mailto:contact@siddo.me", "telephone": "+227 90 78 22 24", "address": {"@type": "PostalAddress", "addressLocality": "Niamey", "addressCountry": "NE"}, "knowsLanguage": ["fr", "en"], "knowsAbout": ["Communication", "Communication événementielle 360", "Live streaming", "Graphisme", "Branding", "Identité visuelle", "Webdesign", "WordPress", "Montage vidéo", "Réseaux informatiques", "Helpdesk", "Formation en bureautique", "Formation en intelligence artificielle"], "worksFor": {"@type": "Organization", "name": "Ubiko Media TV"}, "url": "https://saidsiddo.netlify.app/", "image": "https://saidsiddo.netlify.app/og-cover-2.jpg"}</script>
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Anton&family=Poppins:ital,wght@0,400;0,500;0,600;0,700;0,800;1,400&family=JetBrains+Mono:wght@400;600;800&display=swap" rel="stylesheet">
@@ -1221,7 +1221,7 @@ body.open nav.top{backdrop-filter:none!important;-webkit-backdrop-filter:none!im
       <div class="cgrid">
         <a class="cc wa rv" href="https://wa.me/22790782224" target="_blank" rel="noopener"><small>WhatsApp</small><b>+227 90 78 22 24</b></a>
         <button class="cc rv" data-copy="+227 98 61 54 20" style="--d:.05s"><small>Téléphone</small><b>+227 90 78 22 24<br>+227 98 61 54 20</b></button>
-        <a class="cc mail rv" href="mailto:said@siddo.me" style="--d:.1s"><small>E-mail</small><b>said@siddo.me</b></a>
+        <a class="cc mail rv" href="mailto:contact@siddo.me" style="--d:.1s"><small>E-mail</small><b>contact@siddo.me</b></a>
         <button class="cc vc rv" id="vcard" style="grid-column:1/-1;--d:.2s"><small>Enregistrer</small><b>Ajouter mon contact au téléphone ↓</b></button>
       </div>
     </div>
@@ -1243,7 +1243,7 @@ body.open nav.top{backdrop-filter:none!important;-webkit-backdrop-filter:none!im
     </div>
     <div class="acts">
       <a class="big" href="https://wa.me/22790782224" target="_blank" rel="noopener"><span>Lancer mon projet maintenant<small>WhatsApp · +227 90 78 22 24</small></span><span>↗</span></a>
-      <a class="big w" href="mailto:said@siddo.me"><span>Écrire un e-mail<small>said@siddo.me</small></span><span>→</span></a>
+      <a class="big w" href="mailto:contact@siddo.me"><span>Écrire un e-mail<small>contact@siddo.me</small></span><span>→</span></a>
     </div>
   </div>
   <div class="nextp"><a class="prev" id="prevP" href="#accueil">← Précédent</a><a id="nextP" href="#intro"><small>PAGE SUIVANTE</small><span id="nextT">Introduction</span> →</a></div>
@@ -1420,7 +1420,7 @@ addEventListener('keydown',e=>{if(!lb.classList.contains('on'))return;if(e.key==
 /* liens à venir, copie, vCard */
 $$('[data-soon]').forEach(a=>a.addEventListener('click',e=>{if(a.getAttribute('href')==='#'){e.preventDefault();e.stopPropagation();toast('Lien bientôt disponible')}}));
 $$('[data-copy]').forEach(b=>b.addEventListener('click',async()=>{try{await navigator.clipboard.writeText(b.dataset.copy);toast('Copié : '+b.dataset.copy)}catch(e){toast(b.dataset.copy)}}));
-$('#vcard').onclick=()=>{const v=['BEGIN:VCARD','VERSION:3.0','N:Hamadou Siddo;Saïdou;;;','FN:Saïdou Hamadou Siddo','TITLE:Communicateur · Graphiste · Webdesigner · IT · Formateur','TEL;TYPE=CELL:+22790782224','TEL;TYPE=CELL:+22798615420','EMAIL:said@siddo.me','ADR;TYPE=WORK:;;;Niamey;;;Niger','END:VCARD'].join('\r\n');
+$('#vcard').onclick=()=>{const v=['BEGIN:VCARD','VERSION:3.0','N:Hamadou Siddo;Saïdou;;;','FN:Saïdou Hamadou Siddo','TITLE:Communicateur · Graphiste · Webdesigner · IT · Formateur','TEL;TYPE=CELL:+22790782224','TEL;TYPE=CELL:+22798615420','EMAIL:contact@siddo.me','ADR;TYPE=WORK:;;;Niamey;;;Niger','END:VCARD'].join('\r\n');
   const framed=(()=>{try{return window.self!==window.top}catch(e){return true}})();
   if(framed){navigator.clipboard&&navigator.clipboard.writeText(v).then(()=>toast('Fiche contact copiée'),()=>toast('+227 90 78 22 24'));return}
   try{const a=document.createElement('a');a.href=URL.createObjectURL(new Blob([v],{type:'text/vcard'}));a.download='Saidou-Hamadou-Siddo.vcf';document.body.appendChild(a);a.click();a.remove();toast('Fiche contact téléchargée')}catch(e){toast('Téléchargement indisponible ici')}};
