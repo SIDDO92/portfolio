@@ -819,6 +819,15 @@ body.open nav.top{backdrop-filter:none!important;-webkit-backdrop-filter:none!im
   #ubiko .txt,.team p{overflow-wrap:break-word}
 }
 @media (max-width:760px){.socials{flex-wrap:wrap}.ub-actions{gap:14px}}
+/* branding mobile : Safari ne déforme plus les cartes */
+@media (max-width:760px){
+  .stagebr{grid-template-columns:repeat(2,minmax(0,1fr));gap:14px}
+  .stagebr .prod{width:100%;justify-self:stretch;align-self:start;display:block;position:relative;aspect-ratio:auto;height:auto;padding:0}
+  .stagebr .prod::after{content:"";display:block;padding-top:118%}
+  .stagebr .prod img{position:absolute;left:8%;top:7%;width:84%;height:72%;max-width:none;max-height:none;object-fit:contain}
+  .stagebr .prod::before{inset:auto 18% 16% 18%}
+  .stagebr .prod figcaption{bottom:12px;font-size:11px;letter-spacing:.12em}
+}
 
 </style>
 </head>
