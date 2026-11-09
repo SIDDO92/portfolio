@@ -1,33 +1,213 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
-  <url><loc>https://siddo.me/</loc><lastmod>2026-11-04</lastmod></url>
-  <url><loc>https://siddo.me/intro</loc><lastmod>2026-11-04</lastmod></url>
-  <url><loc>https://siddo.me/skills</loc><lastmod>2026-11-04</lastmod></url>
-  <url><loc>https://siddo.me/branding</loc><lastmod>2026-11-04</lastmod></url>
-  <url><loc>https://siddo.me/visuels</loc><lastmod>2026-11-04</lastmod></url>
-  <url><loc>https://siddo.me/print</loc><lastmod>2026-11-04</lastmod></url>
-  <url><loc>https://siddo.me/web</loc><lastmod>2026-11-04</lastmod></url>
-  <url><loc>https://siddo.me/identites</loc><lastmod>2026-11-04</lastmod></url>
-  <url><loc>https://siddo.me/videos</loc><lastmod>2026-11-04</lastmod></url>
-  <url><loc>https://siddo.me/it</loc><lastmod>2026-11-04</lastmod></url>
-  <url><loc>https://siddo.me/forme</loc><lastmod>2026-11-04</lastmod></url>
-  <url><loc>https://siddo.me/ubiko</loc><lastmod>2026-11-04</lastmod></url>
-  <url><loc>https://siddo.me/clients</loc><lastmod>2026-11-04</lastmod></url>
-  <url><loc>https://siddo.me/temoignages</loc><lastmod>2026-11-04</lastmod></url>
-  <url><loc>https://siddo.me/contact</loc><lastmod>2026-11-04</lastmod></url>
-  <url><loc>https://siddo.me/en/</loc><lastmod>2026-11-04</lastmod></url>
-  <url><loc>https://siddo.me/en/intro</loc><lastmod>2026-11-04</lastmod></url>
-  <url><loc>https://siddo.me/en/skills</loc><lastmod>2026-11-04</lastmod></url>
-  <url><loc>https://siddo.me/en/branding</loc><lastmod>2026-11-04</lastmod></url>
-  <url><loc>https://siddo.me/en/visuels</loc><lastmod>2026-11-04</lastmod></url>
-  <url><loc>https://siddo.me/en/print</loc><lastmod>2026-11-04</lastmod></url>
-  <url><loc>https://siddo.me/en/web</loc><lastmod>2026-11-04</lastmod></url>
-  <url><loc>https://siddo.me/en/identites</loc><lastmod>2026-11-04</lastmod></url>
-  <url><loc>https://siddo.me/en/videos</loc><lastmod>2026-11-04</lastmod></url>
-  <url><loc>https://siddo.me/en/it</loc><lastmod>2026-11-04</lastmod></url>
-  <url><loc>https://siddo.me/en/forme</loc><lastmod>2026-11-04</lastmod></url>
-  <url><loc>https://siddo.me/en/ubiko</loc><lastmod>2026-11-04</lastmod></url>
-  <url><loc>https://siddo.me/en/clients</loc><lastmod>2026-11-04</lastmod></url>
-  <url><loc>https://siddo.me/en/temoignages</loc><lastmod>2026-11-04</lastmod></url>
-  <url><loc>https://siddo.me/en/contact</loc><lastmod>2026-11-04</lastmod></url>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9" xmlns:xhtml="http://www.w3.org/1999/xhtml">
+  <url>
+    <loc>https://siddo.me/</loc>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://siddo.me/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://siddo.me/en/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://siddo.me/"/>
+    <lastmod>2026-11-09</lastmod>
+  </url>
+  <url>
+    <loc>https://siddo.me/en/</loc>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://siddo.me/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://siddo.me/en/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://siddo.me/"/>
+    <lastmod>2026-11-09</lastmod>
+  </url>
+  <url>
+    <loc>https://siddo.me/intro</loc>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://siddo.me/intro"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://siddo.me/en/intro"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://siddo.me/intro"/>
+    <lastmod>2026-11-09</lastmod>
+  </url>
+  <url>
+    <loc>https://siddo.me/en/intro</loc>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://siddo.me/intro"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://siddo.me/en/intro"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://siddo.me/intro"/>
+    <lastmod>2026-11-09</lastmod>
+  </url>
+  <url>
+    <loc>https://siddo.me/skills</loc>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://siddo.me/skills"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://siddo.me/en/skills"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://siddo.me/skills"/>
+    <lastmod>2026-11-09</lastmod>
+  </url>
+  <url>
+    <loc>https://siddo.me/en/skills</loc>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://siddo.me/skills"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://siddo.me/en/skills"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://siddo.me/skills"/>
+    <lastmod>2026-11-09</lastmod>
+  </url>
+  <url>
+    <loc>https://siddo.me/branding</loc>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://siddo.me/branding"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://siddo.me/en/branding"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://siddo.me/branding"/>
+    <lastmod>2026-11-09</lastmod>
+  </url>
+  <url>
+    <loc>https://siddo.me/en/branding</loc>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://siddo.me/branding"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://siddo.me/en/branding"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://siddo.me/branding"/>
+    <lastmod>2026-11-09</lastmod>
+  </url>
+  <url>
+    <loc>https://siddo.me/visuels</loc>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://siddo.me/visuels"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://siddo.me/en/visuels"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://siddo.me/visuels"/>
+    <lastmod>2026-11-09</lastmod>
+  </url>
+  <url>
+    <loc>https://siddo.me/en/visuels</loc>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://siddo.me/visuels"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://siddo.me/en/visuels"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://siddo.me/visuels"/>
+    <lastmod>2026-11-09</lastmod>
+  </url>
+  <url>
+    <loc>https://siddo.me/print</loc>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://siddo.me/print"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://siddo.me/en/print"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://siddo.me/print"/>
+    <lastmod>2026-11-09</lastmod>
+  </url>
+  <url>
+    <loc>https://siddo.me/en/print</loc>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://siddo.me/print"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://siddo.me/en/print"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://siddo.me/print"/>
+    <lastmod>2026-11-09</lastmod>
+  </url>
+  <url>
+    <loc>https://siddo.me/web</loc>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://siddo.me/web"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://siddo.me/en/web"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://siddo.me/web"/>
+    <lastmod>2026-11-09</lastmod>
+  </url>
+  <url>
+    <loc>https://siddo.me/en/web</loc>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://siddo.me/web"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://siddo.me/en/web"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://siddo.me/web"/>
+    <lastmod>2026-11-09</lastmod>
+  </url>
+  <url>
+    <loc>https://siddo.me/identites</loc>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://siddo.me/identites"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://siddo.me/en/identites"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://siddo.me/identites"/>
+    <lastmod>2026-11-09</lastmod>
+  </url>
+  <url>
+    <loc>https://siddo.me/en/identites</loc>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://siddo.me/identites"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://siddo.me/en/identites"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://siddo.me/identites"/>
+    <lastmod>2026-11-09</lastmod>
+  </url>
+  <url>
+    <loc>https://siddo.me/videos</loc>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://siddo.me/videos"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://siddo.me/en/videos"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://siddo.me/videos"/>
+    <lastmod>2026-11-09</lastmod>
+  </url>
+  <url>
+    <loc>https://siddo.me/en/videos</loc>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://siddo.me/videos"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://siddo.me/en/videos"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://siddo.me/videos"/>
+    <lastmod>2026-11-09</lastmod>
+  </url>
+  <url>
+    <loc>https://siddo.me/it</loc>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://siddo.me/it"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://siddo.me/en/it"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://siddo.me/it"/>
+    <lastmod>2026-11-09</lastmod>
+  </url>
+  <url>
+    <loc>https://siddo.me/en/it</loc>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://siddo.me/it"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://siddo.me/en/it"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://siddo.me/it"/>
+    <lastmod>2026-11-09</lastmod>
+  </url>
+  <url>
+    <loc>https://siddo.me/forme</loc>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://siddo.me/forme"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://siddo.me/en/forme"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://siddo.me/forme"/>
+    <lastmod>2026-11-09</lastmod>
+  </url>
+  <url>
+    <loc>https://siddo.me/en/forme</loc>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://siddo.me/forme"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://siddo.me/en/forme"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://siddo.me/forme"/>
+    <lastmod>2026-11-09</lastmod>
+  </url>
+  <url>
+    <loc>https://siddo.me/ubiko</loc>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://siddo.me/ubiko"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://siddo.me/en/ubiko"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://siddo.me/ubiko"/>
+    <lastmod>2026-11-09</lastmod>
+  </url>
+  <url>
+    <loc>https://siddo.me/en/ubiko</loc>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://siddo.me/ubiko"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://siddo.me/en/ubiko"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://siddo.me/ubiko"/>
+    <lastmod>2026-11-09</lastmod>
+  </url>
+  <url>
+    <loc>https://siddo.me/clients</loc>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://siddo.me/clients"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://siddo.me/en/clients"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://siddo.me/clients"/>
+    <lastmod>2026-11-09</lastmod>
+  </url>
+  <url>
+    <loc>https://siddo.me/en/clients</loc>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://siddo.me/clients"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://siddo.me/en/clients"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://siddo.me/clients"/>
+    <lastmod>2026-11-09</lastmod>
+  </url>
+  <url>
+    <loc>https://siddo.me/temoignages</loc>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://siddo.me/temoignages"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://siddo.me/en/temoignages"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://siddo.me/temoignages"/>
+    <lastmod>2026-11-09</lastmod>
+  </url>
+  <url>
+    <loc>https://siddo.me/en/temoignages</loc>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://siddo.me/temoignages"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://siddo.me/en/temoignages"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://siddo.me/temoignages"/>
+    <lastmod>2026-11-09</lastmod>
+  </url>
+  <url>
+    <loc>https://siddo.me/contact</loc>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://siddo.me/contact"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://siddo.me/en/contact"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://siddo.me/contact"/>
+    <lastmod>2026-11-09</lastmod>
+  </url>
+  <url>
+    <loc>https://siddo.me/en/contact</loc>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://siddo.me/contact"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://siddo.me/en/contact"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://siddo.me/contact"/>
+    <lastmod>2026-11-09</lastmod>
+  </url>
 </urlset>
