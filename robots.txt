@@ -1,3 +1,7 @@
 User-agent: *
 Allow: /
+
+User-agent: Googlebot-Image
+Disallow: /img/splash.webp
+
 Sitemap: https://siddo.me/sitemap.xml
